@@ -9,14 +9,15 @@ This keymap is based on [artsey.io](https://artsey.io).
 
 ## Special keycode
 
--   One-shot modifier
-    -   AR_OSM_SFT
-    -   AR_OSM_CTL
-    -   AR_OSM_GUI
+-   Toggle modifier
+    -   AR_TG_SFT
+    -   AR_TG_ALT
+    -   AR_TG_CTL
+    -   AR_TG_GUI
 -   Clear all mods
     -   AR_PANIC
 
 ## Modifier
 
-The right modifiers are configured as one-shot modifier.  
-Please use the LShift, LControl, and LGUI keys for keymap with mod.
+The right modifiers are used as one-shot and toggle modifier keycode.  
+Please use the LShift, LControl, and LGUI for the keycode with mod.
