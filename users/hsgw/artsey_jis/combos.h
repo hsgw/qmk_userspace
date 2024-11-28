@@ -36,13 +36,13 @@ enum combo_layers {
 #define NUM_2_2 KC_6
 #define NUM_2_3 KC_5
 #define NUM_2_4 KC_4
-#define SY1_1_1 KC_BSLS
+#define SY1_1_1 KC_INT1
 #define SY1_1_2 KC_SCLN
-#define SY1_1_3 KC_GRV
-#define SY1_1_4 KC_HASH
-#define SY1_2_1 KC_EQL
+#define SY1_1_3 S(KC_LBRC)
+#define SY1_1_4 S(KC_3)
+#define SY1_2_1 S(KC_MINS)
 #define SY1_2_2 KC_MINS
-#define SY1_2_3 KC_AT
+#define SY1_2_3 KC_LBRC
 #define SY1_2_4 KC_TRNS
 #define CUS_1_1 KC_TRNS
 #define CUS_1_2 KC_VOLU
@@ -52,13 +52,13 @@ enum combo_layers {
 #define CUS_2_2 KC_VOLD
 #define CUS_2_3 KC_MPRV
 #define CUS_2_4 KC_MNXT
-#define SY2_1_1 KC_LCBR
-#define SY2_1_2 KC_LBRC
-#define SY2_1_3 KC_LPRN
+#define SY2_1_1 S(KC_RBRC)
+#define SY2_1_2 KC_RBRC
+#define SY2_1_3 S(KC_8)
 #define SY2_1_4 KC_TRNS
-#define SY2_2_1 KC_RCBR
-#define SY2_2_2 KC_RBRC
-#define SY2_2_3 KC_RPRN
+#define SY2_2_1 S(KC_NUHS)
+#define SY2_2_2 KC_NUHS
+#define SY2_2_3 S(KC_9)
 #define SY2_2_4 KC_TRNS
 #define MOU_1_1 KC_WH_U
 #define MOU_1_2 KC_BTN2
@@ -97,9 +97,9 @@ enum combo_events {
   CMB_BAS_KC_Z,
   CMB_BAS_KC_D,
   CMB_BAS_KC_G,
-  CMB_BAS_KC_QUOT,
-  CMB_BAS_KC_EXLM,
-  CMB_BAS_KC_QUES,
+  CMB_BAS_S_KC_7,
+  CMB_BAS_S_KC_1,
+  CMB_BAS_S_KC_SLSH,
   CMB_BAS_KC_DOT,
   CMB_BAS_KC_COMM,
   CMB_BAS_KC_SLSH,
@@ -158,9 +158,9 @@ const uint16_t PROGMEM cmb_bas_kc_l[] = {BAS_2_4,BAS_2_3,BAS_2_2,COMBO_END};
 const uint16_t PROGMEM cmb_bas_kc_z[] = {BAS_1_4,BAS_1_3,BAS_1_2,BAS_1_1,COMBO_END};
 const uint16_t PROGMEM cmb_bas_kc_d[] = {BAS_1_4,BAS_1_3,BAS_1_2,COMBO_END};
 const uint16_t PROGMEM cmb_bas_kc_g[] = {BAS_1_3,BAS_1_2,COMBO_END};
-const uint16_t PROGMEM cmb_bas_kc_quot[] = {BAS_1_3,BAS_2_3,COMBO_END};
-const uint16_t PROGMEM cmb_bas_kc_exlm[] = {BAS_1_2,BAS_2_2,COMBO_END};
-const uint16_t PROGMEM cmb_bas_kc_ques[] = {BAS_1_1,BAS_2_1,COMBO_END};
+const uint16_t PROGMEM cmb_bas_s_kc_7[] = {BAS_1_3,BAS_2_3,COMBO_END};
+const uint16_t PROGMEM cmb_bas_s_kc_1[] = {BAS_1_2,BAS_2_2,COMBO_END};
+const uint16_t PROGMEM cmb_bas_s_kc_slsh[] = {BAS_1_1,BAS_2_1,COMBO_END};
 const uint16_t PROGMEM cmb_bas_kc_dot[] = {BAS_1_4,BAS_2_2,COMBO_END};
 const uint16_t PROGMEM cmb_bas_kc_comm[] = {BAS_1_4,BAS_2_3,COMBO_END};
 const uint16_t PROGMEM cmb_bas_kc_slsh[] = {BAS_1_4,BAS_2_1,COMBO_END};
@@ -219,9 +219,9 @@ const uint16_t PROGMEM cmb_num_kc_0[] = {NUM_2_2,NUM_2_3,COMBO_END};
 [CMB_BAS_KC_Z]=COMBO(cmb_bas_kc_z, KC_Z),\
 [CMB_BAS_KC_D]=COMBO(cmb_bas_kc_d, KC_D),\
 [CMB_BAS_KC_G]=COMBO(cmb_bas_kc_g, KC_G),\
-[CMB_BAS_KC_QUOT]=COMBO(cmb_bas_kc_quot, KC_QUOT),\
-[CMB_BAS_KC_EXLM]=COMBO(cmb_bas_kc_exlm, KC_EXLM),\
-[CMB_BAS_KC_QUES]=COMBO(cmb_bas_kc_ques, KC_QUES),\
+[CMB_BAS_S_KC_7]=COMBO(cmb_bas_s_kc_7, S(KC_7)),\
+[CMB_BAS_S_KC_1]=COMBO(cmb_bas_s_kc_1, S(KC_1)),\
+[CMB_BAS_S_KC_SLSH]=COMBO(cmb_bas_s_kc_slsh, S(KC_SLSH)),\
 [CMB_BAS_KC_DOT]=COMBO(cmb_bas_kc_dot, KC_DOT),\
 [CMB_BAS_KC_COMM]=COMBO(cmb_bas_kc_comm, KC_COMM),\
 [CMB_BAS_KC_SLSH]=COMBO(cmb_bas_kc_slsh, KC_SLSH),\

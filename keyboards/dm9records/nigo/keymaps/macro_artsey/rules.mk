@@ -1,4 +1,3 @@
-# SRC += users/hsgw/artsey/combo_util.c
 SRC += users/hsgw/artsey_jis/combo_util.c
 
 COMBO_ENABLE = yes
