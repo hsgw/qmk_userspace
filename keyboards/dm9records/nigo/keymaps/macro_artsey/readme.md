@@ -1,1 +1,3 @@
-# Default keymap for nigo
+# macro + artsey keymap for nigo
+
+This keymap is based on [artsey.io](https://artsey.io).

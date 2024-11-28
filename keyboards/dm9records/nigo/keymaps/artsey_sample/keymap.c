@@ -4,8 +4,9 @@
 #include QMK_KEYBOARD_H
 
 // #include "users/hsgw/artsey/combos.h"
-#include "users/hsgw/artsey_jis/combos.h"
+#include "combos.h"
 
+// add combos from combos.h
 combo_t key_combos[] = {__KEY_COMBOS_DEF__};
 
 // clang-format off

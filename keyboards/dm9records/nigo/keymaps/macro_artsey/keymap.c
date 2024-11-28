@@ -10,7 +10,7 @@ enum layers {
     _2ND,
     _3RD,
     _4TH,
-    LAYER_SAFE_RANGE
+    USER_LAYER_END
 };
 
 enum custom_keycodes {
@@ -20,14 +20,17 @@ enum custom_keycodes {
 };
 
 // Second, define start layer and keycode for combos
-#define COMBO_LAYER_START LAYER_SAFE_RANGE
+#define COMBO_LAYER_START   USER_LAYER_END
 #define COMBO_KEYCODE_START CUSTOM_KEYCODE_END
 
 // Third, include combos
 #include "users/hsgw/artsey_jis/combos.h"
 
+// Define combos to activate / deactivate artsey
 const uint16_t PROGMEM combo_to_Artsey[] = { KC_5, LT(_3RD, KC_6), COMBO_END};
 const uint16_t PROGMEM combo_to_BASE[]   = { KC_BSPC, BAS_2_1, COMBO_END};
+
+// Add combos from combos.h
 combo_t key_combos[] = {
     __KEY_COMBOS_DEF__,
     COMBO(combo_to_Artsey, TO(CMB_BAS)),
@@ -94,9 +97,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // clang-format on
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    // first check combos
     if (process_record_combo_keycode(keycode, record) == false) {
         return false;
     }
+    // then check other user keycodes
     switch (keycode) {
         case USR_PANIC:
             if (record->event.pressed) {
